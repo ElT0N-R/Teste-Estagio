@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Fornecedor</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="main">
+    <div class="container">
+        <h2 class="my-4">Cadastro Fornecedor/Produto</h2>
+        <form id="cadastro-form">
+            <div class="container btn btn-primary ">
+                <h5>Dados do Fornecedor</h5>
+            </div>
+            <div class="form-section card p-3">
+                
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="razaoSocial">Razão Social</label>
+                        <input type="text" class="form-control" id="razaoSocial" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="nomeFantasia">Nome Fantasia</label>
+                        <input type="text" class="form-control" id="nomeFantasia" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="cnpj">CNPJ</label>
+                        <input type="text" class="form-control" id="cnpj" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inscricaoEstadual">Inscrição Estadual</label>
+                        <input type="text" class="form-control" id="inscricaoEstadual">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inscricaoMunicipal">Inscrição Municipal</label>
+                        <input type="text" class="form-control" id="inscricaoMunicipal">
+                    </div>
+                    <div class="form-group col-md-2" id="cep">
+                        <label for="cep">CEP</label>
+                        <input type="text" class="form-control" id="cep" required>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="endereco">Endereço</label>
+                        <input type="text" class="form-control" id="endereco" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="complemento">Complemento</label>
+                        <input type="text" class="form-control" id="complemento">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="bairro">Bairro</label>
+                        <input type="text" class="form-control" id="bairro" required>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="municipio">Município</label>
+                        <input type="text" class="form-control" id="municipio" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-2">
+                        <label for="estado">Estado</label>
+                        <input type="text" class="form-control" id="estado" required>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="numero">Número</label>
+                        <input type="text" class="form-control" id="numero" required>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="contato">Nome da Pessoa de Contato</label>
+                        <input type="text" class="form-control" id="contato" required>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="telefone">Telefone</label>
+                        <input type="text" class="form-control" id="telefone" required>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="email">E-mail</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="container btn btn-primary ">
+                <h5>Produtos</h5>
+            </div>
+            <div class="form-section card p-3">
+            <div class="form-section card m-3 p-3">
+                <h5>Produtos - 1</h5>
+                <div id="produtos-container-1">
+                    <div class="produto-item form-row">
+                        <div class="form-group col-md-4">
+                            <label for="produto">Produto</label>
+                            <input type="text" class="form-control" name="produto[]" required>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                            <label for="unidade">Unidade de Medida</label>
+                            <input type="number" class="form-control" name="unidade[]" required>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                            <label for="quantidade">Quantidade em Estoque</label>
+                            <input type="text" class="form-control" name="quantidade[]" required>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                            <label for="valor">Valor Unitário</label>
+                            <input type="text" step="0.01" class="form-control" name="valor[]" required>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="valorTotal">Valor Total</label>
+                            <input type="text" step="0.01" class="form-control" name="valorTotal[]" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section card m-3 p-3">
+                <h5>Produtos - 2</h5>
+                <div id="produtos-container-2">
+                    <div class="produto-item form-row">
+                        <div class="form-group col-md-4">
+                            <label for="produto">Produto</label>
+                            <input type="text" class="form-control" name="produto[]" required>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="unidade">Unidade de Medida</label>
+                            <input type="number" class="form-control" name="unidade[]" required>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="quantidade">Quantidade em Estoque</label>
+                            <input type="text" class="form-control" name="quantidade[]" required>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="valor">Valor Unitário</label>
+                            <input type="text" step="0.01" class="form-control" name="valor[]" required>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="valorTotal">Valor Total</label>
+                            <input type="text" step="0.01" class="form-control" name="valorTotal[]" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-success mb-3" id="addProduto">Adicionar Produto</button>
+            </div>
+            <div class="container mt-4 card m-3 p-3">
+        <div class="row">
+            <div class="col-12 btn btn-primary p-3">
+                <h4 class="mb-0">Anexos</h4>
+            </div>
+        </div>
+        <div class="row border mt-2 p-3">
+            <div class="col-12 card">
+                <h5>Itens</h5>
+                <div class="d-flex align-items-center mb-2">
+                    <button class="btn btn-danger mr-2">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                    <button class="btn btn-info mr-2">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <span>Documento anexo 1</span>
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                    <button class="btn btn-danger mr-2">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                    <button class="btn btn-info mr-2">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <span>Documento anexo 2</span>
+                </div>
+                <span class="btn btn-success mb-2">
+                    <div class="row mt-2">
+                        <div class="col-12 text-center">
+                            <button class="btn btn-success">Incluir Anexo</button>
+                        </div>
+                    </div>
+                </span>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-12 text-center">
+                <button class="btn btn-success">Salvar Fornecedor</button>
+            </div>
+        </div>
+    </div>
+<!-- Modal de loading -->
+<div class="modal fade" id="loadingModal" tabindex="-1" role="dialog" aria-labelledby="loadingModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+                <p>Enviando dados...</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

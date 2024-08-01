@@ -1,0 +1,18 @@
+h2 {
+    margin-left: 25rem;
+    align-items: center;
+}
+
+.card {
+    border: 2px solid;
+    border-width: 3px ;
+    border-style: groove;
+}
+
+.container {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.form-control {
+    border: 2px solid;
+}
