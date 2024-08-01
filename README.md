@@ -24,9 +24,6 @@ Este projeto é um sistema de cadastro de fornecedores e produtos, desenvolvido 
 |-- css/
 |-- js/
 
-markdown
-Copiar código
-
 ## Dependências
 
 - [Bootstrap](https://getbootstrap.com/)
